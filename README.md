@@ -43,4 +43,5 @@ Developed and enhanced a Next.js-based website with dynamic animations and inter
    npm run dev
    ```
 
+
 Open your browser and go to http://localhost:3000 to view the application.
