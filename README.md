@@ -27,21 +27,20 @@ Developed and enhanced a Next.js-based website with dynamic animations and inter
 
 2. Navigate to the project directory:
 
-```bash
-
-cd your-repository
-```
+   ```bash
+   cd your-repository
+   ```
 
 3. Install dependencies:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 4. Start the development server:
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 Open your browser and go to http://localhost:3000 to view the application.
