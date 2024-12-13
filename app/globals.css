@@ -126,24 +126,3 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 code[data-line-numbers-max-digits="4"] > [data-line]::before {
   width: 2.25rem;
 }
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeInUp 1s ease-out;
-}
-
-.fade-in-delayed {
-  animation: fadeInUp 1s ease-out;
-  animation-delay: 0.5s;
-  animation-fill-mode: both;
-}

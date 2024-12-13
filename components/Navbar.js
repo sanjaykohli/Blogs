@@ -1,7 +1,10 @@
 "use client"
 import React from 'react'
 import Link from 'next/link';
-import { Button } from "@/components/ui/button"
+import { ModeToggle } from './theme-btn';
+import LoadingBar from 'react-top-loading-bar';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import {
     Sheet,
     SheetContent,
@@ -11,46 +14,37 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 
-import { ModeToggle } from './theme-btn';
-import LoadingBar from 'react-top-loading-bar';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-
 const Navbar = () => {
-
     const [progress, setProgress] = useState(0)
     const pathname = usePathname()
-
+    
     useEffect(() => {
       setProgress(20)
-
       setTimeout(() => {
         setProgress(40)
       }, 100);
-
       setTimeout(() => {
         setProgress(100)
       }, 400);
      
     }, [pathname])
-
+    
     useEffect(() => {
       setTimeout(() => {
        setProgress(0)
       }, 50);
     }, [])
-    
-    
+   
     return (
         <nav className="p-4 bg-background/50 sticky top-0 backdrop-blur border-b z-10">
             <LoadingBar
-                color='#933ce6'
-                progress={progress}
-                onLoaderFinished={() => setProgress(0)}
-            />
+        color='#933ce6'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
             <div className="container mx-auto flex justify-between items-center">
                 <Link href={"/"}><div className="text-lg font-bold">
-                    Sairam
+                    SaiBlog
                 </div></Link>
                 <div className="hidden md:flex space-x-4 items-center">
                     <Link href="/" className="hover:scale-105 hover:font-semibold transition-transform duration-300"> Home
@@ -61,15 +55,10 @@ const Navbar = () => {
                     <Link href="/blog" className="hover:scale-105 hover:font-semibold transition-transform duration-300">
                         Blog
                     </Link>
-                    <div className='flex items-center'>
-                        <ModeToggle />
-                    </div>
+                    <ModeToggle />
                 </div>
-
                 <div className="md:hidden">
-                    <span className="mx-2"> 
-                        <ModeToggle />
-                    </span>
+                    <ModeToggle />
                     <Sheet>
                         <SheetTrigger>
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
