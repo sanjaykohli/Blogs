@@ -2,7 +2,7 @@
 title: Apple
 description: This is a blog of apple
 slug: Apple
-date: 29/11/2024
+date: 2024-12-13
 author: Sairam
 image: /images/apple.png
 ---
